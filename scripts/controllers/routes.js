@@ -37,9 +37,9 @@ page('/', () => {
 
     console.log(parseURL(window.location.href))
     
-    const path = decodeURI(parseURL(window.location.href).searchObject.route)
+    const path = parseURL(window.location.href).searchObject.route
 
-    console.log(path)
+    console.log(path.replace('%2F','/'))
         
     // if (path) {
     //     page(path)
