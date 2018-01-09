@@ -6,7 +6,7 @@ function parseURL(url) {
     // Let the browser do the work
     parser.href = url;
     // Convert query string to object
-    queries = parser.search.replace(/^\?/, '').split('&');
+    queries = parser.search ?  parser.search.replace(/^\?/, '').split('&') : '';
     for (i = 0; i < queries.length; i++) {
         split = queries[i].split('=');
         searchObject[split[0]] = split[1];
@@ -38,6 +38,8 @@ page('/', () => {
     console.log(parseURL(window.location.href))
     
     const path = decodeURI(parseURL(window.location.href).searchObject.route)
+
+    console.log(path)
         
     if (path) {
         page(path)
