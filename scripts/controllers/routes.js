@@ -11,6 +11,6 @@ page('/*', (ctx, next) => {
 page('/', app.thingListPage.init)
 page('/admin', app.adminPage.init)
 page('/create', app.createPage.init)
-page('/edit/:id', (ctx) => app.editPage.init(ctx.params.id))
+page('/edit/:id', (ctx) => app.Thing.fetchOne(ctx.params.id).then(app.editPage.init))
 
 page.start()
