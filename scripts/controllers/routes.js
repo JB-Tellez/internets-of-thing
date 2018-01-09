@@ -1,5 +1,5 @@
 // NOTE: these routes will work just fine running locally
-// But when you start remotely check out routes-advanced.js
+// But when you start remotely check out routes-remote.js
 
 
 // all route changes should hide page containers
