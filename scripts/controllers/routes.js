@@ -23,10 +23,6 @@ function parseURL(url) {
     };
 }
 
-if(window.location.pathname !== '/') {
-    page.base('/internets-of-thing');
-    }
-
 // all routes should hide .page containers
 page('/*', (ctx, next) => {
     $('.page').hide()
