@@ -41,11 +41,11 @@ page('/', () => {
 
     console.log(path)
         
-    if (path) {
-        page(path)
-    } else {
+    // if (path) {
+    //     page(path)
+    // } else {
         app.thingListPage.init()
-    }
+    // }
     
 })
 
