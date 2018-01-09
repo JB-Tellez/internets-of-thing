@@ -1,0 +1,49 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404</title>
+    <base href="/book-list-client">
+</head>
+
+<body>
+    <script>
+        
+        function parseURL(url) {
+    var parser = document.createElement('a'),
+        searchObject = {},
+        queries, split, i;
+    // Let the browser do the work
+    parser.href = url;
+    // Convert query string to object
+    queries = parser.search.replace(/^\?/, '').split('&');
+    for (i = 0; i < queries.length; i++) {
+        split = queries[i].split('=');
+        searchObject[split[0]] = split[1];
+    }
+    return {
+        protocol: parser.protocol,
+        host: parser.host,
+        hostname: parser.hostname,
+        port: parser.port,
+        pathname: parser.pathname,
+        search: parser.search,
+        searchObject: searchObject,
+        hash: parser.hash
+    };
+}
+        const parsed = parseURL(window.location.href)
+        
+        const newPath = parsed.pathname.replace('/book-list-client', '')
+       
+        window.location.href =  parsed.protocol + '//' + parsed.hostname +  '?route=' + newPath;
+    </script>
+</body>
+
+</html>
