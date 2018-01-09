@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Internet of Things</title>
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/">home</a>
+            </li>
+            <li>
+                <a href="/admin">admin</a>
+            </li>
+            <li>
+                <a href="/create">create</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- pages -->
+    <section id="thing-list-page" class="page">
+        <h1>Thing List</h1>
+        <ul id="thing-list"></ul>
+    </section>
+
+    <section id="admin-page" class="page">
+        <h1>Admin Page</h1>
+        <p>I don't do anything at the moment. But just wait!</p>
+    </section>
+
+    <section id="create-page" class="page">
+        <h1>Create page</h1>
+        <form>
+            <input id="create-form-name" type="text">
+            <button>create</button>
+        </form>
+    </section>
+
+    <section id="edit-page" class="page">
+        <h1>Edit Page</h1>
+        <input type="text" id="edit-name">
+        <button>change</button>
+    </section>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="scripts/models/Thing.js"></script>
+    <script src="scripts/views/thing-list-page.js"></script>
+    <script src="scripts/views/admin-page.js"></script>
+    <script src="scripts/views/create-page.js"></script>
+    <script src="scripts/views/edit-page.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+
+</body>
+
+</html>
