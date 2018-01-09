@@ -35,8 +35,7 @@ page('/*', (ctx, next) => {
 
 page('/', () => {
 
-    console.log(parseURL(window.location.href))
-    
+    console.log('path hackery')
     let path = parseURL(window.location.href).searchObject.route
 
     path = path && path.replace('%2F','/')
@@ -51,5 +50,6 @@ page('/', () => {
 
 page('/admin', app.adminPage.init)
 page('/create', app.createPage.init)
+page('/edit/:id', (ctx) => console.log(ctx))
 
 page.start()
