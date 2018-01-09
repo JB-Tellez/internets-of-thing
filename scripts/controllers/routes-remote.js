@@ -15,7 +15,7 @@ page('/create', app.createPage.init)
 page('/edit/:id', (ctx) => app.editPage.init(ctx.params.id))
 page('/', () => {
 
-    console.log('path hackery abounds, but why??? ')
+    console.log('path hackery is afoot, but why??? ')
 
     let path = parseURL(window.location.href).searchObject.route
 
