@@ -4,8 +4,6 @@ var app = app || {};
 
     const thingListPage = {};
 
-    let canceled = false
-
     const markup = `
         <li data-id="{{id}}">
             {{name}} 
@@ -22,10 +20,6 @@ var app = app || {};
         app.Thing.all.forEach(thing => {
             $('#thing-list').append($(template(thing)))
         })
-    }
-
-    thingListPage.cancel = () => {
-        canceled = true
     }
 
     thingListPage.init = () => {
@@ -49,11 +43,10 @@ var app = app || {};
 
         app.Thing.fetchAll().then(() => {
 
-            if (!canceled) {
             renderThings()
 
             $('#thing-list-page').show()
-            }
+
 
         })
     }

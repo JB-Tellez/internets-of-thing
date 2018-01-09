@@ -3,10 +3,8 @@ var app = app || {};
 (module => {
 
     module.editPage = {
-        init(thing) {
 
-            
-            $('.page').hide()
+        init(thing) {
 
             $('#edit-name').val(thing.name)
 
