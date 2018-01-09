@@ -36,7 +36,7 @@ page('/', () => {
     const path = parseURL(window.location.href).searchObject.route
         
     if (path) {
-        page('/', path)
+        page(path)
     } else {
         app.thingListPage.init()
     }
