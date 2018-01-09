@@ -40,11 +40,11 @@ permalink: /404.html
 }
         const parsed = parseURL(window.location.href)
 
-        console.log(parsed)
+        console.log('parsed', parsed)
         
         const newPath = parsed.pathname.replace('/internets-of-thing', '')
        
-        window.location.href =  parsed.protocol + '//' + parsed.hostname +  '?route=' + newPath;
+        window.location.href =  parsed.protocol + '//' + parsed.hostname +  '/internets-of-thing?route=' + newPath;
     </script>
 </body>
 
