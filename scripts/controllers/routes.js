@@ -39,13 +39,13 @@ page('/', () => {
     
     const path = parseURL(window.location.href).searchObject.route
 
-    console.log(path.replace('%2F','/'))
+    console.log(path && path.replace('%2F','/'))
         
-    // if (path) {
-    //     page(path)
-    // } else {
+    if (path) {
+        page(path)
+    } else {
         app.thingListPage.init()
-    // }
+    }
     
 })
 
