@@ -8,8 +8,12 @@
     <title>Internet of Things</title>
     <link rel="stylesheet" href="./styles/app.css">
     <base href=".">
-    <script id="thing-list-template" type="text/x-handlebars-template">
-    
+    <script id="thing-template" type="text/x-handlebars-template">
+        <li data-id="{{id}}">
+            {{name}} 
+            <button class="update">update</button>
+            <button class="delete">delete</button>
+        </li>
     </script>
 </head>
 
@@ -29,7 +33,7 @@
         </ul>
     </nav>
 
-    <!-- pages -->
+    <!-- pages: only one shown at a time -->
     <section id="thing-list-page" class="page">
         <h1>Thing List</h1>
         <ul id="thing-list"></ul>

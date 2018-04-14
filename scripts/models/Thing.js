@@ -2,7 +2,6 @@ var app = app || {};
 
 (module => {
 
-    // const url = 'http://localhost:3000/things'
     const url = 'https://ahoy-heroku.herokuapp.com/things'
 
     const Thing = {}
@@ -10,8 +9,11 @@ var app = app || {};
     Thing.all = []
 
     Thing.fetchAll = () => {
+
         return $.getJSON(url).then(things => {
+        
             Thing.all = things
+        
             Thing.all.sort((a,b) => {
                 if (a.name > b.name) {
                     return 1

@@ -4,14 +4,7 @@ var app = app || {};
 
     const thingListPage = {};
 
-    const markup = `
-        <li data-id="{{id}}">
-            {{name}} 
-            <button class="update">update</button>
-            <button class="delete">delete</button>
-        </li>
-    `
-    const template = Handlebars.compile(markup)
+    const template = Handlebars.compile($('#thing-template').text())
 
     function renderThings() {
 

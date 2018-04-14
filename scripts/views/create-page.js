@@ -9,6 +9,7 @@ var app = app || {};
             event.preventDefault()
             const name = $('#create-form-name').val()
             app.Thing.create({ name }).then(page('/'))
+            $('#create-form-name').val('')
         })
 
         $('#create-page').show()
