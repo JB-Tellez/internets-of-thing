@@ -7,16 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Internet of Things</title>
     <link rel="stylesheet" href="./styles/app.css">
-    <base href="/internets-of-thing/">
+    <base href=".">
+    <script>
+        // hack to run on GH pages
+        if (window.location.protocol.startsWith('https:')) {
+            document.getElementsByTagName("base")[0].href = '/internets-of-thing/';
+        }
+    </script>
     <script id="thing-template" type="text/x-handlebars-template">
         <li data-id="{{id}}">
-            {{name}} 
+            {{name}}
             <button class="update">update</button>
             <button class="delete">delete</button>
         </li>
     </script>
     <script src="./spa-for-ghpages.js"></script>
-        </head>
+</head>
 
 <body>
 
@@ -70,7 +76,9 @@
     <script src="./scripts/views/create-page.js"></script>
     <script src="./scripts/views/edit-page.js"></script>
     <script src="./scripts/controllers/routes.js"></script>
-    <script>console.log('v0.0.10')</script>
+    <script>
+        console.log('v0.0.11')
+    </script>
 
 </body>
 
