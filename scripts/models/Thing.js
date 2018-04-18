@@ -2,6 +2,7 @@ var app = app || {};
 
 (module => {
 
+    // Note: hard coded API URL - adjust as needed
     const url = 'https://ahoy-heroku.herokuapp.com/things'
 
     const Thing = {}
