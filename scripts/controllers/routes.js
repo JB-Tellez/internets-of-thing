@@ -1,7 +1,6 @@
 // NOTE: these routes will work just fine running locally
 // But when you start remotely check out routes-remote.js
 
-// page.base('/internets-of-thing');
 // all route changes should hide page containers
 page('/*', (ctx, next) => {
     $('.page').hide()
