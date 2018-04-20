@@ -25,6 +25,10 @@
       // Otherwise, leave segmentCount as 0.
       var segmentCount = 1;
 
+      if (window.location.protocol.startsWith('http:')) {
+        segmentCount = 0;
+      }
+
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
