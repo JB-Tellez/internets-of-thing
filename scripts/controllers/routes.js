@@ -1,8 +1,3 @@
-// tweak to run on GH Pages
-if (window.location.protocol.startsWith('https:')) {
-    page.base('/internets-of-thing');
-}
-
 // all route changes should hide page containers
 page('/*', (ctx, next) => {
     $('.page').hide()

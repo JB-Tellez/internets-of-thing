@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Internets of Thing</title>
-    <link rel="stylesheet" href="./styles/app.css">
     <base href=".">
     <script>
         // hack to run on GH pages
+        // note that href value must match your app's nested folder name
         if (window.location.protocol.startsWith('https:')) {
             document.getElementsByTagName("base")[0].href = '/internets-of-thing/';
         }
     </script>
+     <script src="./spa-for-ghpages.js"></script>
+
+     <link rel="stylesheet" href="./styles/app.css">
+    
     <script id="thing-template" type="text/x-handlebars-template">
         <li data-id="{{id}}">
             {{name}}
@@ -21,7 +25,7 @@
             <button class="delete">delete</button>
         </li>
     </script>
-    <script src="./spa-for-ghpages.js"></script>
+   
 </head>
 
 <body>
@@ -70,6 +74,14 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
+    <script>
+        // tweak to run on GH Pages
+        if (window.location.protocol.startsWith('https:')) {
+            page.base('/internets-of-thing');
+        }
+
+    </script>
     <script src="./scripts/models/Thing.js"></script>
     <script src="./scripts/views/thing-list-page.js"></script>
     <script src="./scripts/views/admin-page.js"></script>
@@ -77,7 +89,7 @@
     <script src="./scripts/views/edit-page.js"></script>
     <script src="./scripts/controllers/routes.js"></script>
     <script>
-        console.log('v0.0.12')
+        console.log('v0.0.13')
     </script>
 
 </body>
