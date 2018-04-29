@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Internets of Thing</title>
-    <base href=".">
     <script>
 
         // hack to run on GH pages
         
         // NOTE that href value must match your app's nested folder name
         
-        if (window.location.protocol.startsWith('https:')) {
-            document.getElementsByTagName("base")[0].href = '/internets-of-thing/';
-        }
+        // if (window.location.protocol.startsWith('https:')) {
+        //     document.getElementsByTagName("base")[0].href = '/internets-of-thing/';
+        // }
 
         // Single Page Apps for GitHub Pages
         // https://github.com/rafrex/spa-github-pages
@@ -65,13 +64,13 @@
     <nav>
         <ul>
             <li>
-                <a href="./">home</a>
+                <a href="/">home</a>
             </li>
             <li>
-                <a href="./admin">admin</a>
+                <a href="/admin">admin</a>
             </li>
             <li>
-                <a href="./create">create</a>
+                <a href="/create">create</a>
             </li>
         </ul>
     </nav>
@@ -107,12 +106,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 
-    <script>
-        // tweak to run on GH Pages
-        if (window.location.protocol.startsWith('https:')) {
-            page.base('/internets-of-thing');
-        }
-    </script>
+
     <script src="./scripts/models/Thing.js"></script>
     <script src="./scripts/views/thing-list-page.js"></script>
     <script src="./scripts/views/admin-page.js"></script>
@@ -120,7 +114,11 @@
     <script src="./scripts/views/edit-page.js"></script>
     <script src="./scripts/controllers/routes.js"></script>
     <script>
+<<<<<<< HEAD
         console.log('v0.0.15')
+=======
+        console.log('v0.0.14')
+>>>>>>> 7d919094a39c68e9ab50503834fed71251aadf8b
     </script>
 
 </body>
