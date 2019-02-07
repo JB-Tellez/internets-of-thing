@@ -2,7 +2,7 @@
 
 set -e
 
-cd /src
+cd src
 
 python manage.py makemigrations --noinput
 python manage.py migrate --noinput
